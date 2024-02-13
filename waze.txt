@@ -1,0 +1,9 @@
+Strona Glowna gdzie jest tylko Logowanie
+Logowanie (rozne typy uzytkownikow na strone Admin Moderator i uzytkownik)
+Skrpyt do Sesji 
+Skrypt polaczony z baza danych oraz filmami na serwverrze oraz ich dostepem 
+
+
+
+
+na serverze bedzie trzeba zainstalowac ffmpeg.org na systemie i w app.js 

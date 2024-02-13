@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Panel</title>
+</head>
+<body>
+    <h1>Admin Panel</h1>
+    
+    <form action="/admin" method="post" enctype="multipart/form-data">
+        <label>Title:</label>
+        <input type="text" id="title" name="title" required><br>
+    
+        <label>Image Name:</label>
+        <input type="text" id="imageName" name="imageName" required><br>
+
+        <label>Image (PNG or JPG):</label>
+        <input type="file" id="image" name="image" accept=".png, .jpg" required><br>
+    
+        <label>Video Name:</label>
+        <input type="text" id="videoName" name="videoName" required><br>
+    
+        <label>Video:</label>
+        <input type="file" id="video" name="video" accept=".mp4, .mkv" required><br>
+    
+        <button type="submit">Add File</button>
+    </form>
+
+    <script>
+        // Skrypt ustawiający wartości ukrytych pól przed wysłaniem formularza
+        function setHiddenValues() {
+            document.getElementById('hiddenImageName').value = document.getElementById('imageName').value;
+            document.getElementById('hiddenVideoName').value = document.getElementById('videoName').value;
+        }
+    </script>
+</body>
+</html>

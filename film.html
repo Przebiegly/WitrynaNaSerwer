@@ -1,0 +1,38 @@
+<!-- film.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Film</title>
+</head>
+<body>
+    <h1>Detale Filmu</h1>
+    
+    <div>
+        <h2 id="movieTitle"></h2>
+        <video controls id="movieVideo" width="640" height="360">
+            Twoja przeglądarka nie obsługuje tagu wideo.
+        </video>
+    </div>
+
+    <a href="/filmy">Powrót do listy filmów</a>
+
+    <script>
+        // Kod JavaScript do pobierania szczegółów filmu
+        const movieTitleElement = document.getElementById('movieTitle');
+        const movieVideoElement = document.getElementById('movieVideo');
+
+        // Pobierz szczegóły filmu z serwera
+        fetch('/filmy/:id') // Zastąp to swoim rzeczywistym adresem API
+            .then(response => response.json())
+            .then(data => {
+                movieTitleElement.innerText = data.title;
+                movieVideoElement.src = data.video;
+            })
+            .catch(error => console.error('Błąd podczas pobierania szczegółów filmu:', error));
+    </script>
+</body>
+</html>
