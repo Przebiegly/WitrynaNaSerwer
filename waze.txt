@@ -7,3 +7,5 @@ Skrypt polaczony z baza danych oraz filmami na serwverrze oraz ich dostepem
 
 
 na serverze bedzie trzeba zainstalowac ffmpeg.org na systemie i w app.js 
+
+sprawdzam czy to zadziala 
